@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>testJSass4</title>
+    <!-- add css -->
+    <link rel="stylesheet" href="Sass/style.css">
+    <!-- add fontawesome -->
+    <script src="https://kit.fontawesome.com/8f45faa16b.js" crossorigin="anonymous"></script>
+    <!-- font family  -->
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Caveat+Brush|Poppins&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <!-- start header  -->
+    <header class="navbar-top">
+        <form class="col-search">
+            <input type="search" placeholder="search"><i class="fas fa-search"></i>
+        </form>
+        <img class="logo" src="img/logo.png" alt="logo">
+        <ul class="sign">
+            <a href="">SIGN UP</a>
+            <a href="">SIGN IN</a>
+        </ul>
+    </header>
+    <header class="navbar-btm">
+        <div class="dropdown">
+            <button class="btn"><i class="fas fa-bars"></i></button>
+            <div class="dropdown-menu">
+                <a href="index.html">Home</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="playMusic.html">Song</a>
+            </div>
+        </div>
+        <div class="menu-btn">
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="playMusic.html">Song</a>
+            </ul>
+        </div>
+        <div class="icons-rs">
+            <a class="fb" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="ytb" href=""><i class="fab fa-youtube"></i></a>
+            <a class="insta" href=""><i class="fab fa-instagram"></i></a>
+            <a class="twitt" href=""><i class="fab fa-twitter"></i></a>
+        </div>
+    </header>
+    <!-- End header  -->
+    <!-- Start play music  -->
+    <section id="mu-container">
+        <div class="container">
+            <!-- Audio player -->
+            <div class="ap" id="ap">
+                <div class="ap__inner">
+                    <div class="ap__item ap__item--playback">
+                        <button class="ap__controls ap__controls--prev">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M9.516 12l8.484-6v12zM6 6h2.016v12h-2.016v-12z"></path>
+                            </svg>
+                        </button>
+                        <button class="ap__controls ap__controls--toggle">
+                            <svg class="icon-play" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="36" height="36" viewBox="0 0 36 36" data-play="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" data-pause="M 12,26 16.33,26 16.33,10 12,10 z M 20.66,26 25,26 25,10 20.66,10 z">
+                            <path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
+                            </svg>
+                        </button>
+                        <button class="ap__controls ap__controls--next">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M15.984 6h2.016v12h-2.016v-12zM6 18v-12l8.484 6z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="ap__item ap__item--track">
+                        <div class="track">
+                            <div class="track__title">Queue is empty</div>
+                            <div class="track__time">
+                            <span class="track__time--current">--</span>
+                            <span> / </span>
+                            <span class="track__time--duration">--</span>
+                            </div>
+                
+                            <div class="progress-container">
+                            <div class="progress">
+                                <div class="progress__bar"></div>
+                                <div class="progress__preload"></div>
+                            </div>
+                            </div>
+                
+                        </div>
+                    </div>
+                    <div class="ap__item ap__item--settings">
+                        <div class="ap__controls volume-container">
+                            <button class="volume-btn">
+                            <svg class="icon-volume-on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M14.016 3.234q3.047 0.656 5.016 3.117t1.969 5.648-1.969 5.648-5.016 3.117v-2.063q2.203-0.656 3.586-2.484t1.383-4.219-1.383-4.219-3.586-2.484v-2.063zM16.5 12q0 2.813-2.484 4.031v-8.063q2.484 1.219 2.484 4.031zM3 9h3.984l5.016-5.016v16.031l-5.016-5.016h-3.984v-6z"></path>
+                            </svg>
+                            <svg class="icon-volume-off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 3.984v4.219l-2.109-2.109zM4.266 3l16.734 16.734-1.266 1.266-2.063-2.063q-1.734 1.359-3.656 1.828v-2.063q1.172-0.328 2.25-1.172l-4.266-4.266v6.75l-5.016-5.016h-3.984v-6h4.734l-4.734-4.734zM18.984 12q0-2.391-1.383-4.219t-3.586-2.484v-2.063q3.047 0.656 5.016 3.117t1.969 5.648q0 2.25-1.031 4.172l-1.5-1.547q0.516-1.266 0.516-2.625zM16.5 12q0 0.422-0.047 0.609l-2.438-2.438v-2.203q2.484 1.219 2.484 4.031z"></path>
+                            </svg>
+                            </button>
+                            <div class="volume">
+                            <div class="volume__track">
+                                <div class="volume__bar"></div>
+                            </div>
+                            </div>
+                        </div>
+                        <button class="ap__controls ap__controls--repeat">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M17.016 17.016v-4.031h1.969v6h-12v3l-3.984-3.984 3.984-3.984v3h10.031zM6.984 6.984v4.031h-1.969v-6h12v-3l3.984 3.984-3.984 3.984v-3h-10.031z"></path>
+                            </svg>
+                        </button>
+                            <button class="ap__controls ap__controls--playlist">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M17.016 12.984l4.969 3-4.969 3v-6zM2.016 15v-2.016h12.984v2.016h-12.984zM18.984 5.016v1.969h-16.969v-1.969h16.969zM18.984 9v2.016h-16.969v-2.016h16.969z"></path>
+                                </svg>
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section id="co-morceau">
+        <form class="tbale-song">
+            <table>
+                <tr>
+                    <th><a href="#">Artistes</a> </td>
+                    <th><a href="">Morceaux</a></th>
+                    <th><a href="">Albums</a></th>
+                </tr>
+                <tr>
+                    <td><img style="width: 10%; height: auto;" src="img/art/sch.jpg"> SCH</td>
+                    <td><audio autoplay controls src="music/sch.mp3">ca ira</audio></td>
+                    <td>RoofTop</td>
+                </tr>
+                <tr>
+                    <td>PNL</td>
+                    <td>Blanka</td>
+                    <td>DF</td>
+                </tr>
+                <tr>
+                    <td>Muslim</td>
+                    <td>law kan</td>
+                    <td>KHJHJH</td>
+                </tr>
+                <tr>
+                    <td>Adele</td>
+                    <td>bb</td>
+                    <td>hhh</td>
+                </tr>
+                <tr>
+                    <td>Zaho</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Bruno Mars</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Booba</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Ihab Amir</td>
+                </tr>
+                <tr>
+                    <td>Wael</td>
+                </tr>
+            </table>
+        </form>
+    </section> -->
+    <!---
+	hgghggh
+--->
+<!-- Start Footer -->
+<footer>
+    <div class="container-ftr">
+        <div class="logoftr">
+            <img src="img/logo.png" alt="logo">
+            <h3>Morocco Music</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="sendMessage">
+            <textarea name="message" id="msg" cols="20" rows="3"></textarea><br>
+            <button>Send</button> 
+        </div>
+        <div class="contact-us">
+            <ul>
+                <li>morocco@music.com</li>
+                <li>+212667544309</li>
+                <div class="icons-rs">
+                    <a class="fb" href=""><li><i class="fab fa-facebook-f"></i></li></a>
+                    <a class="ytb" href=""><li><i class="fab fa-youtube"></i></li></a>
+                    <a class="insta" href=""><li><i class="fab fa-instagram"></i></li></a>
+                    <a class="twitt" href=""><li><i class="fab fa-twitter"></i></li></a>
+                </div>
+            </ul>
+        </div>
+    </div>
+</footer>
+<!-- End footer -->
+<!-- add javascript -->
+<script src="js/custom.js"></script>
+    </body>
+    </html>
