@@ -16,7 +16,6 @@ a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border: 1px solid #c7c7c7;
   height: auto;
   background-color: black;
 }
@@ -40,6 +39,7 @@ a {
   width: 120px;
   background-color: white;
   border-radius: 10px;
+  margin: 10px 0;
 }
 
 .sign a {
@@ -166,16 +166,26 @@ a {
   transition: all 0.3s ease;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .dropdown {
     display: none;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .logo {
     width: 100px;
     height: auto;
+  }
+  .container-ftr {
+    text-align: center;
+  }
+  .container-ftr h3, .container-ftr p {
+    margin: auto;
+    margin: 10px auto;
+  }
+  .contact-us ul {
+    padding-left: initial;
   }
   .col-search {
     display: none;
@@ -201,8 +211,62 @@ a {
   }
 }
 
-#slide-container .cur-slide .dot {
-  margin: 10px;
+#in-container {
+  padding: 60px 30px;
+}
+
+#in-container .contenu-home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#in-container .contenu-home .btn {
+  width: 300px;
+}
+
+#in-container .contenu-home .btn input {
+  color: blue;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+#in-container .contenu-home .btn button {
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  width: 60px;
+}
+
+#in-container .contenu-home .btn1 {
+  width: 40%;
+  text-align: center;
+}
+
+#in-container .contenu-home .btn1 button {
+  background-color: red;
+  border: none;
+  font-size: 25px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  padding: 5px 12px;
+}
+
+#in-container .contenu-home .btn1 #result {
+  padding: 10px;
+  font-size: 18px;
+  color: black;
+  width: auto;
 }
 
 #mu-container {
@@ -221,15 +285,18 @@ a {
       flex-wrap: wrap;
   padding-top: 50px;
   width: 80%;
+  margin: auto;
 }
 
 #mu-container .container .ap {
   width: 300px;
-  margin: auto;
   border-radius: 50%;
   padding: 20px 0;
   background-image: url("/img/dot.gif");
   background-position: center;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 #mu-container .container .ap .ap__inner {
@@ -367,6 +434,7 @@ footer {
   background-color: black;
   height: auto;
   width: 100%;
+  bottom: 0;
 }
 
 footer .container-ftr {

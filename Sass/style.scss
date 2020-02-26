@@ -20,7 +20,6 @@ a {
 .navbar-top{
     display: flex;
     justify-content: space-around;
-    border: 1px solid $c7;
     height: auto;
     background-color: $b;
         
@@ -42,6 +41,7 @@ a {
         width: $w;
         background-color: $wt;
         border-radius: $dx;
+        margin: $dx 0;
    }
 }
 .sign a {
@@ -149,15 +149,27 @@ a {
     transition: all 0.3s ease;
 } 
 // media query
-@media (min-width:600px){
+@media (min-width:800px){
     .dropdown {
         display: none;
     }
 }
-@media (max-width:600px) {
+@media (max-width:800px) {
     .logo{
         width: 100px;
         height: auto;
+    }
+    .container-ftr{
+        text-align: center;
+        h3, p{
+            margin: auto;
+            margin: 10px auto;
+        }
+    }
+    .contact-us ul{
+        
+            padding-left: initial;
+        
     }
     .col-search{
     display: none;
@@ -178,11 +190,56 @@ a {
         padding-left: 3*$dx;
     }
 }
+
 // home page
+#in-container {
+    padding: 60px 30px;
 
+    .contenu-home{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .btn{
+            width: 300px;
+            input{
+                color: blue;
+                font-size: $dx+6;
+                margin-bottom: $h;
+                
+            }
+            button{
+                color: $wt;
+                background-color: $b;
+                font-size: $dx+6;
+                border: none;
+                cursor: pointer;
+                padding: $dx;
+                border-radius: $dx;
+                width: $w/2;
 
-#slide-container .cur-slide .dot {
-    margin: 10px;   
+            }
+        }
+        .btn1{
+            width: 40%;
+            text-align: center;
+
+            button{
+                background-color: red;
+                border: none;
+                font-size: 25px;
+                border-radius: $dx;
+                color: $wt;
+                font-weight: bold;
+                padding: 5px 12px;
+            }
+            #result{
+                padding: 10px;
+                font-size: 18px;
+                color: black;
+                width: auto;
+            }
+        }
+    }
 }
 
 // Song page 
@@ -197,15 +254,15 @@ a {
         flex-wrap: wrap;
         padding-top: 50px;
         width: 80%;
-        
+        margin: auto;
 
         .ap{
             width: 300px;
-            margin: auto;
             border-radius: 50%;
             padding: 20px 0;
             background-image: url("/img/dot.gif");
             background-position: center;
+            height: min-content;
 
             .ap__inner{
                 color: $wt;
@@ -333,6 +390,7 @@ footer{
     background-color: $b;
     height: auto;
     width: 100%;
+    bottom: 0;
 
     .container-ftr{
         justify-content: center;
