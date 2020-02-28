@@ -13,8 +13,8 @@ class StackNode {
     
     // push
     push(data) {
-       
         let node = new StackNode(data);
+        
         node.next =  this.top;
         this.top = node;
 
@@ -85,3 +85,9 @@ class StackNode {
     // next.onclick = function() {
         
     // }
+    // var images = [];
+    //         for (var i = 0; i < n; i++) { // bien sur, n doit etre défini quelque part...
+    //             var image = new Image();
+    //             image.src = 'image/allumette.gif';
+    //             images.push(image);
+    //         }

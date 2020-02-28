@@ -194,6 +194,7 @@ a {
 // home page
 #in-container {
     padding: 60px 30px;
+    margin-bottom: $h;
 
     .contenu-home{
         display: flex;
@@ -390,7 +391,6 @@ footer{
     background-color: $b;
     height: auto;
     width: 100%;
-    bottom: 0;
 
     .container-ftr{
         justify-content: center;

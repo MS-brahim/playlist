@@ -213,6 +213,7 @@ a {
 
 #in-container {
   padding: 60px 30px;
+  margin-bottom: 40px;
 }
 
 #in-container .contenu-home {
@@ -434,7 +435,6 @@ footer {
   background-color: black;
   height: auto;
   width: 100%;
-  bottom: 0;
 }
 
 footer .container-ftr {
