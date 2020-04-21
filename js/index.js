@@ -1,5 +1,5 @@
 class StackNode {
-    constructor(data, next) {
+    constructor(data, next){
         this.data = data;
         this.next = next;
     }
@@ -81,13 +81,4 @@ class StackNode {
         ss.clear();
         ss.print();
     }
-    // function next 
-    // next.onclick = function() {
-        
-    // }
-    // var images = [];
-    //         for (var i = 0; i < n; i++) { // bien sur, n doit etre défini quelque part...
-    //             var image = new Image();
-    //             image.src = 'image/allumette.gif';
-    //             images.push(image);
-    //         }
+    

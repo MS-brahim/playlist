@@ -148,48 +148,6 @@ a {
     color: deepskyblue;
     transition: all 0.3s ease;
 } 
-// media query
-@media (min-width:800px){
-    .dropdown {
-        display: none;
-    }
-}
-@media (max-width:800px) {
-    .logo{
-        width: 100px;
-        height: auto;
-    }
-    .container-ftr{
-        text-align: center;
-        h3, p{
-            margin: auto;
-            margin: 10px auto;
-        }
-    }
-    .contact-us ul{
-        
-            padding-left: initial;
-        
-    }
-    .col-search{
-    display: none;
-    }
-    .menu-btn {
-        display: none;
-    }
-    .navbar-btm{
-        height: 60px;
-        justify-content: end;
-        padding-right: 10%;
-    }
-    .dropdown button:focus +.dropdown-menu{display: block;}
-    .equalizer img {
-        width: 70%;
-    }
-    #playlist {
-        padding-left: 3*$dx;
-    }
-}
 
 // home page
 #in-container {
@@ -201,7 +159,7 @@ a {
         justify-content: center;
         flex-wrap: wrap;
         .btn{
-            width: 300px;
+            width: auto;
             input{
                 color: blue;
                 font-size: $dx+6;
@@ -248,76 +206,52 @@ a {
     text-align: center;
     background-color: $wt;
     width: 100%;
+    margin: 100px 0;
 
     .container{
-        justify-content: space-around;
-        display: flex;
-        flex-wrap: wrap;
-        padding-top: 50px;
-        width: 80%;
+        width: 40%;
         margin: auto;
-
-        .ap{
-            width: 300px;
-            border-radius: 50%;
-            padding: 20px 0;
-            background-image: url("/img/dot.gif");
-            background-position: center;
-            height: min-content;
-
-            .ap__inner{
+        #printpage{
+            width: auto;
+            height: 580px;
+            margin: auto;
+            background-color: black;
+            padding: 3*$dx;
+            img{
+                width: 100%;
+            }
+            audio{
+                width: 100%;
+            }
+            .infosTrack{
+                background-color: $b;
                 color: $wt;
-                font-size: 20px;
-
-                .ap__controls{
-                    background-color: $cj;
-                    border-radius: $dx;
-                    border: none;
-                    .icon-play{
-
-                        &:hover{
-                            background-color: rgba(204, 197, 197, 0.158);
-                            width: 40px;
-                            height: auto;
-                        }
-                    }
+                font-size: 18px;
+                margin-bottom: 70px;
+                
+                span{
+                    color:$cj;
                 }
-                .volume-container{
-                    width: 50px;
-                    margin: auto;
-                    margin-bottom: 10px;
-                    
-                    .volume-btn{
-                        background-color: rgba(172, 255, 47, 0.11);
-                        border: none;
-
-                        .icon-volume-off{
-                            display: none;
-                        }
-                    }
-                }
-            }
+            }  
         }
-        .pl-container{
-            color: black;
-            font-size: 18px;
-
-            ul {
-                list-style: none;
-                text-align: start;
-                background-color: rgba(128, 128, 128, 0.219);
-                border-radius: 20px;
-                padding: 3*$dx;
-
-                li {
-                    background-color: $wt;
-                    padding: $dx;
-                    border-radius: $dx;
-                    margin-top: $dx;
-                }
+        .buttons{
+            width: auto;
+            button{
+                border: none;
+                font-weight: bold;
+                margin-top: -110px;
+                position: absolute;
+                cursor: pointer;
+                
             }
+            #back{
+                left: 35%;
+            }
+            #next{
+                right: 35%;
+            }   
         }
-
+       
     }
 }
 
@@ -462,4 +396,55 @@ footer{
            }
         }
     }
+}
+// media query
+@media (min-width:800px){
+    .dropdown {
+        display: none;
+    }
+}
+@media (max-width:800px) {
+    .logo{
+        width: 100px;
+        height: auto;
+    }
+    .container-ftr{
+        text-align: center;
+        h3, p{
+            margin: auto;
+            margin: 10px auto;
+        }
+    }
+    .contact-us ul{
+        
+            padding-left: initial;
+        
+    }
+    .col-search{
+    display: none;
+    }
+    .menu-btn {
+        display: none;
+    }
+    .navbar-btm{
+        height: 60px;
+        justify-content: end;
+        padding-right: 10%;
+    }
+    .dropdown button:focus +.dropdown-menu{display: block;}
+    .equalizer img {
+        width: 70%;
+    }
+    #playlist {
+        padding-left: 3*$dx;
+    }
+    #mu-container{
+        .container{
+        width: 80%;
+        #printpage{
+            height: auto;
+        }
+        }
+    }
+    
 }
