@@ -186,7 +186,8 @@ a {
             }
         }
         .btn1{
-            width: 20%;
+            width: auto;
+            padding: $dx;
             border: 1px solid $b;
             margin: 0 2*$dx;
         }
