@@ -182,6 +182,7 @@ a {
                 padding: $dx;
                 border-radius: $dx;
                 width: $w/2;
+                margin-left: 2*$dx;
 
             }
         }
@@ -189,7 +190,8 @@ a {
             width: auto;
             padding: $dx;
             border: 1px solid $b;
-            margin: 0 2*$dx;
+            margin: $dx 2*$dx;
+            padding-right: 3*$dx;
         }
     }
 }
