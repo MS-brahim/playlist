@@ -48,7 +48,7 @@ class Satck {
         list+="<ol>";
         while(current)
         {
-            list+= "<li>"+ current.data+"</li>";
+            list+= "<li>"+ current.data+"</li>"+"<hr>";
             current=current.next;
         }
         list+="</ol>";
@@ -162,7 +162,7 @@ class Queue{
             let current = this.front;
             qList+="<ol>";
             while(current){
-                qList+= "<li>"+current.data+"</li>";
+                qList+= "<li>"+current.data+"</li>" +"<hr>";
 
                 current = current.next;
             }
