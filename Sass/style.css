@@ -171,6 +171,12 @@ a {
   margin-bottom: 40px;
 }
 
+#in-container h2 {
+  text-align: center;
+  text-shadow: 1px 2px 1px rgba(250, 246, 1, 0.363);
+  margin: 40px;
+}
+
 #in-container .contenu-home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,9 +193,12 @@ a {
 }
 
 #in-container .contenu-home .btn input {
-  color: blue;
+  color: black;
   font-size: 16px;
   margin-bottom: 40px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 #in-container .contenu-home .btn button {
@@ -204,25 +213,9 @@ a {
 }
 
 #in-container .contenu-home .btn1 {
-  width: 40%;
-  text-align: center;
-}
-
-#in-container .contenu-home .btn1 button {
-  background-color: red;
-  border: none;
-  font-size: 25px;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
-  padding: 5px 12px;
-}
-
-#in-container .contenu-home .btn1 #result {
-  padding: 10px;
-  font-size: 18px;
-  color: black;
-  width: auto;
+  width: 20%;
+  border: 1px solid black;
+  margin: 0 20px;
 }
 
 #mu-container {

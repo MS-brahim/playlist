@@ -153,7 +153,11 @@ a {
 #in-container {
     padding: 60px 30px;
     margin-bottom: $h;
-
+    h2{
+        text-align: center;
+        text-shadow: 1px 2px 1px $cj;
+        margin: 40px;
+    }
     .contenu-home{
         display: flex;
         justify-content: center;
@@ -161,9 +165,12 @@ a {
         .btn{
             width: auto;
             input{
-                color: blue;
+                color: $b;
                 font-size: $dx+6;
                 margin-bottom: $h;
+                width: 200px;
+                padding: $dx;
+                border-radius: $dx;
                 
             }
             button{
@@ -179,24 +186,9 @@ a {
             }
         }
         .btn1{
-            width: 40%;
-            text-align: center;
-
-            button{
-                background-color: red;
-                border: none;
-                font-size: 25px;
-                border-radius: $dx;
-                color: $wt;
-                font-weight: bold;
-                padding: 5px 12px;
-            }
-            #result{
-                padding: 10px;
-                font-size: 18px;
-                color: black;
-                width: auto;
-            }
+            width: 20%;
+            border: 1px solid $b;
+            margin: 0 2*$dx;
         }
     }
 }

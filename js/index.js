@@ -1,10 +1,11 @@
+// Satck 
 class StackNode {
-    constructor(data, next){
-        this.data = data;
+    constructor(img, next=null){
+        this.data = img;
         this.next = next;
     }
 }   
-    class LinkedSatck {
+class Satck {
     constructor() {
         this.top = null;
         this.size = 0;
@@ -12,8 +13,8 @@ class StackNode {
 
     
     // push
-    push(data) {
-        let node = new StackNode(data);
+    push(img) {
+        let node = new StackNode(img);
         
         node.next =  this.top;
         this.top = node;
@@ -26,7 +27,7 @@ class StackNode {
         this.top = this.top.next;
 
         this.size--;
-        return result.data;
+        return result.img;
     }
     
     //Clear
@@ -55,7 +56,7 @@ class StackNode {
     }
 }    
 
-    let ss = new LinkedSatck();
+    let S = new Satck();
     let push = document.getElementById("push");
     let pop = document.getElementById("pop");
     let clear = document.getElementById("clear");
@@ -65,20 +66,136 @@ class StackNode {
     push.onclick = function() {
         let insertImg = document.getElementById("insertImg").value;
         if(insertImg.length > 0 ){
-            ss.push(insertImg);
-            ss.print();
+            S.push(insertImg);
+            S.print();
         }else{
-            alert("Add Image");
+            alert('Add new photo');
         }
     }
     // function pop
     pop.onclick = function() {
-        ss.pop();
-        ss.print();
+        S.pop();
+        S.print();
     }
     // function clear
     clear.onclick = function(){
-        ss.clear();
-        ss.print();
+        S.clear();
+        S.print();
     }
     
+// Queue 
+class queueNode {
+    constructor(data){
+        this.data = data;
+        this.next = null;
+    }
+}
+class Queue{
+    constructor(){
+        this.front = null;
+        this.back = 0;
+    }
+
+    // function isEmpty
+    isEmpty() {
+        return !this.front;
+    }
+
+    // function enqueue 
+    enqueue(data){
+        // create a new node with data
+        let qNode = new queueNode(data)
+
+        // if queue is empty 
+        if (this.isEmpty()){
+            // point front and back to new node   
+            this.front = this.back = qNode;  
+        }
+        // else the queue is not empty 
+        else{
+            // push node to back of the queue
+            // by pointing the last node to the newly created node 
+            this.back.next = qNode;
+
+            // move back pointer  to new node 
+            this.back = qNode;
+
+        }
+        this.print();
+
+    }
+
+    // function dequeue
+    dequeue(){
+        // pointer to front of the queue 
+        let qNode = this.front;
+
+        // if queue is not empty 
+        if(!this.isEmpty()){
+
+            // move front to the next data 
+            this.front = this.front.next;
+        }
+
+        // check if front is null 
+        if(!this.front){
+
+            // set back to null 
+            this.back = null;
+        }
+        // print 
+        this.print();
+
+        return qNode;
+    }
+
+    // function clear data of queue 
+    qClear(){
+        this.front = null;
+    }
+        
+    
+    // function print 
+    print(){
+        
+            let qList ="";
+            let current = this.front;
+            qList+="<ol>";
+            while(current){
+                qList+= "<li>"+current.data+"</li>";
+
+                current = current.next;
+            }
+            qList+="</ol>";
+            document.getElementById('qResult').innerHTML=qList
+        
+    }
+        
+}
+    let q = new Queue();
+
+    let enqueue = document.getElementById('enq');
+    let dequeue = document.getElementById('deq');
+    let qClear = document.getElementById('clr');
+    
+    enqueue.onclick = function(){
+        let insertData = document.getElementById('insertData').value;
+        q.enqueue(insertData);
+        
+    }
+
+    dequeue.onclick = function() {
+        q.dequeue();
+    }
+
+    qClear.onclick = function () {
+        q.qClear();
+        q.print();
+    }
+    
+
+    // q.enqueue(1);
+    // q.enqueue("E");
+
+    // q.dequeue();
+    // q.dequeue();
